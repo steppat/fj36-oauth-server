@@ -1,1 +1,1 @@
-web: java -jar $JAVA_OPTS -Dserver.port=$PORT target/payfastweb-1.jar
+web: java -jar $JAVA_OPTS -Dserver.port=$PORT target/payfast-1.jar
