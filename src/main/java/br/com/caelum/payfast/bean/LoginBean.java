@@ -61,11 +61,13 @@ public class LoginBean {
 	
 
 	@RequestMapping(method=RequestMethod.POST,value="/login")
-	public String login(@ModelAttribute @Valid Usuario usuario, HttpServletRequest request, BindingResult result) {
+	public String login(@Valid Usuario usuario, BindingResult result,  HttpServletRequest request) {
+		
 		
 		if(result.hasErrors() || !usuarioDao.existe(usuario)) {
 			return createRedirectUrl();
 		}
+		
 		
 		try {
 			String authorizationToken = geraOAuthToken();
