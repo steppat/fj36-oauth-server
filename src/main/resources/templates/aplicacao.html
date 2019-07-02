@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Payfast Cadastro da Aplicacao</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+	<form action="/aplicacao" method="post">
+	<fieldset>
+		<legend>Cadastro da Aplicacao</legend>
+			<div class="form-group">		
+			<label for="nome">Nome:</label>
+			<input class="form-control" type="text"  name="nome" />
+			</div>
+
+			<div class="form-group">			
+			<label for="clientId">Client Id:</label>
+			<input class="form-control" type="text" name="clientId" />
+			</div>
+			
+			<div class="form-group">			
+			<label for="clientSecret">Client Secret:</label>
+			<input class="form-control" type="text" name="clientSecret" />
+			</div>
+		
+			<div class="form-group">	
+			<label for="appcallbackUrl">App Callback URL:</label>
+			<input class="form-control" type="text" name="appcallbackUrl" />
+			</div>
+
+			<input class="btn btn-primary" type="submit" value="cadastrar" />				
+	</fieldset>
+	</form>
+	
+	 <table class="table" style="margin-top:20px">
+      <tr>
+        <th>Nome</th>
+        <th>Client ID</th>
+        <th>Client Secret</th>
+        <th>Callback Uri</th>
+      </tr>
+      <tr th:each="app : ${aplicacoes}" >
+        <td th:text="${app.nome}"></td>
+        <td th:text="${app.clientId}"></td>
+        <td th:text="${app.clientSecret}"></td>
+        <td th:text="${app.appcallbackUrl}"></td>
+        
+      </tr>
+    </table>
+	</div>
+</body>
+</html>

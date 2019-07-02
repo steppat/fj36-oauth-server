@@ -1,11 +1,16 @@
 package br.com.caelum.payfast.modelo;
 
+import javax.validation.constraints.NotEmpty;
 
 public class Aplicacao {
 
+	@NotEmpty
 	private String nome;
+	@NotEmpty
 	private String clientId;
+	@NotEmpty
 	private String clientSecret;
+	@NotEmpty
 	private String appcallbackUrl;
 	
 	public Aplicacao() { 
@@ -39,8 +44,7 @@ public class Aplicacao {
 	public void setClientSecret(String clientSecret) {
 		this.clientSecret = clientSecret;
 	}
-	
-	
+		
 	public String getAppcallbackUrl() {
 		return appcallbackUrl;
 	}

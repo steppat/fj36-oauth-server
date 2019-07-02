@@ -3,30 +3,33 @@
 <head> 
     <title>Getting Started: Serving Web Content</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
-	<p th:switch="${valido}">
-    	<span th:case="true" th:text="'Client ID valido'" /> 
-   		<span th:case="false" th:text="'Client ID invalido'" />
-	</p>
+<div class="container">
+
+	<div  th:text="${message}" class="alert alert-info" role="info" style="margin-top: 20px">
+	</div>
 
 	<!--  email: usuario@email.com senha: 1234 -->
 	<form action="/login" method="post">
 	<fieldset>
 		<legend>Payfast Login</legend>
+		
+			<div class="form-group">
 				<label for="email">Email:</label>
-				<input type="text"  name="email" />
-				
-				<br />
-				
+				<input class="form-control" type="text"  name="email" />
+			</div>
+		
+			<div class="form-group">				
 				<label for="senha">Senha:</label>
-				<input type="password" name="senha" />
+				<input  class="form-control" type="password" name="senha" />
+			</div>
 
-				<br/>
-
-				<input type="submit" value="Logar" />				
+			<input class="btn btn-primary" type="submit" value="Logar" />				
 	</fieldset>
 	</form>
+</div>
 </body>
 </html>

@@ -1,9 +1,13 @@
 package br.com.caelum.payfast.modelo;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Usuario {
 
-	private Integer id;
+	@NotEmpty
 	private String email;
+
+	@NotEmpty
 	private String senha;
 
 	public String getEmail() {

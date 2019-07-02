@@ -25,6 +25,7 @@ public class AplicacaoDao {
 		ap.setClientId("12345");
 		ap.setClientSecret("123");
 		ap.setNome("fj36");
+		ap.setAppcallbackUrl("http://localhost:8080/fj36-livraria/redirect");
 		aplicacoes.add(ap);
 	}
 

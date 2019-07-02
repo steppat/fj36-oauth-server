@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PayfastWebApplication {
+public class SimpleOAuthServer {
 
     public static void main(String[] args) {
-        SpringApplication.run(PayfastWebApplication.class, args);
+        SpringApplication.run(SimpleOAuthServer.class, args);
     }
 }
