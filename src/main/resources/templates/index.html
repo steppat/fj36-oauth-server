@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<p th:switch="${valido}">
+    	<span th:case="true" th:text="'Client ID valido'" /> 
+   		<span th:case="false" th:text="'Client ID invalido'" />
+	</p>
+
+	<!--  email: usuario@email.com senha: 1234 -->
+	<form action="/login" method="post">
+	<fieldset>
+		<legend>Payfast Login</legend>
+				<label for="email">Email:</label>
+				<input type="text"  name="email" />
+				
+				<br />
+				
+				<label for="senha">Senha:</label>
+				<input type="password" name="senha" />
+
+				<br/>
+
+				<input type="submit" value="Logar" />				
+	</fieldset>
+	</form>
+</body>
+</html>
